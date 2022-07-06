@@ -6,7 +6,7 @@ subtitle: <a href='#'>Affiliations</a>. University of British Columbia
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: linkedin.jpg
   image_cicular: false # crops the image to make it circular
   address: >
     <p>555 your office number</p>
