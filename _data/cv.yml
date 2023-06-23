@@ -11,22 +11,25 @@
 - title: Education
   type: time_table
   contents:
-    - title: B.A.Sc
+    - title: M.Sc in Computer Science
       institution: University of British Columbia, Vancouver, Canada
-      year: 2023
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+      year: 2023 - NOW
+    - title: B.A.Sc in Engineering Physics
+      institution: University of British Columbia, Vancouver, Canada
+      year: 2017 - 2023
+    #   description:
+    #     - Description 1.
+    #     - Description 2.
+    #     - title: Description 3.
+    #       contents:
+    #         - Sub-description 1.
+    #         - Sub-description 2.
+    # - title: Federal teaching diploma
+    #   institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
+    #   year: 1900
+    #   description:
+    #     - Description 1.
+    #     - Description 2.
 
 - title: Experience
   type: time_table
@@ -91,7 +94,7 @@
         - Description 1.
         - Description 2.
 
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+# - title: Other Interests
+#   type: list
+#   contents:
+#     - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
