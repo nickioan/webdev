@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. University of British Columbia
+# subtitle: <a href='https://www.cs.ubc.ca/'>Affiliations</a>. University of British Columbia
 
 profile:
   align: right
@@ -14,6 +14,4 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I'm Nick, a 1st year M.Sc student in Computer Science at the University of British Columbia. Currently doing reserach on quadruped locomotion under the supervision of Dr. Michiel van de Panne
-
-Research Interests include Reinforcement Learning for continuous control and Sim2Real application. Please check out over my projects and feel free to contact me via email!
+I'm Nick, a M.Sc student in Computer Science at the University of British Columbia (UBC). Currently doing reserach on planning and control for character animation and robotics under the supervision of Professor <a href='https://www.cs.ubc.ca/~van/'>Michiel van de Panne</a>. Feel free to contact me via email!
