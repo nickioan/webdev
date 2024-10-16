@@ -1,58 +1,83 @@
 ---
 layout: page
-title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
-nav: false # Change to true when ready
-nav_order: 2
-display_categories: [work, fun]
-horizontal: false
+title: "Projects"
+nav: true
+nav_order: 1
+projects:
+  - title: "Robot-to-Robot transfer for Quadrupedal Locomotion"
+    description: "Course Research Project during Masters"
+    image: "/assets/img/554x_project.png"
+    links:
+      paper: "https://drive.google.com/file/d/1monMVvvcgyGZP9xPdxwHLn6verm3G-gQ/view?usp=sharing"
+      video: "https://www.youtube.com/watch?v=ei3YxlxRfYg"
+    publication: false
+
+  - title: "OpenSim2Real: An End-To-End Open Source Robotic Platform for Sim2Real Research"
+    description: "Engineering Capstone Project"
+    image: "/assets/img/OpenSim2Real.png"
+    links:
+      page: "https://opensim2real.github.io/os2r-superbuild/docs/index.html"
+      video: "https://www.youtube.com/watch?v=6FDHketaaDo"
+    publication: false
+
+  - title: "An Empirical Study of Non-Uniform Sampling in Off-Policy Reinforcement Learning for Continuous Control"
+    authors: 
+      - Nicholas Ioannidis
+      - Wilder Lavington
+      - Mark Schmidt
+    venue: "Deep RL Workshop NeurIPS 2021"
+    image: "/assets/img/nus_project.jpg"
+    links:
+      paper: "https://openreview.net/forum?id=KvDedKtOX7B"
+      video: "https://neurips.cc/virtual/2021/35778"
+    publication: true
+    bibkey: "ioannidis2021an"
 ---
 
-<!-- pages/projects.md -->
-<div class="projects">
-{%- if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  {%- for category in page.display_categories %}
-  <h2 class="category">{{ category }}</h2>
-  {%- assign categorized_projects = site.projects | where: "category", category -%}
-  {%- assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal -%}
-  <div class="container">
-    <div class="row row-cols-2">
-    {%- for project in sorted_projects -%}
-      {% include projects_horizontal.html %}
-    {%- endfor %}
-    </div>
-  </div>
-  {%- else -%}
-  <div class="grid">
-    {%- for project in sorted_projects -%}
-      {% include projects.html %}
-    {%- endfor %}
-  </div>
-  {%- endif -%}
-  {% endfor %}
+<div class="projects-section">
+  <div class="projects">
+    {%- for project in page.projects %}
+      <div class="project">
+        <div class="project-content" style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+          <div class="project-thumbnail" style="margin-right: 15px; width: 150px;">
+            <img src="{{ project.image }}" alt="Project Thumbnail for {{ project.title }}" style="width: 100%; border-radius: 5px;">
+          </div>
+          <div class="project-details">
+            <h3 style="font-size: 1.2em; margin: 0; font-weight: bold;">{{ project.title }}</h3>
 
-{%- else -%}
-<!-- Display projects without categories -->
-  {%- assign sorted_projects = site.projects | sort: "importance" -%}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal -%}
-  <div class="container">
-    <div class="row row-cols-2">
-    {%- for project in sorted_projects -%}
-      {% include projects_horizontal.html %}
+            <!-- If the project is a publication, display the authors and venue -->
+            {%- if project.publication %}
+              <p><strong>{{ project.authors[0] }}</strong>{%- for author in project.authors offset:1 -%}, {{ author }}{%- endfor %}</p>
+              <p><em>{{ project.venue }}</em></p>
+            {%- else %}
+              <!-- If it's not published, display the description -->
+              <p>{{ project.description }}</p>
+            {%- endif %}
+            
+            <!-- Links -->
+            <div class="project-links" style="margin-top: 10px;">
+              {%- assign links = "" %}
+              {%- if project.links.page %}
+                {%- assign links = links | append: '<a href="' | append: project.links.page | append: '" target="_blank">Project Page</a>' %}
+              {%- endif %}
+              {%- if project.links.paper %}
+                {%- if links != "" %}
+                  {%- assign links = links | append: ' / ' %}
+                {%- endif %}
+                {%- assign links = links | append: '<a href="' | append: project.links.paper | append: '" target="_blank">Paper</a>' %}
+              {%- endif %}
+              {%- if project.links.video %}
+                {%- if links != "" %}
+                  {%- assign links = links | append: ' / ' %}
+                {%- endif %}
+                {%- assign links = links | append: '<a href="' | append: project.links.video | append: '" target="_blank">Video</a>' %}
+              {%- endif %}
+              {{ links | raw }}
+            </div>
+          </div>
+        </div>
+      </div>
     {%- endfor %}
-    </div>
   </div>
-  {%- else -%}
-  <div class="grid">
-    {%- for project in sorted_projects -%}
-      {% include projects.html %}
-    {%- endfor %}
-  </div>
-  {%- endif -%}
-{%- endif -%}
 </div>

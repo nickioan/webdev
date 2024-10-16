@@ -19,6 +19,12 @@
 - title: Research Experience
   type: time_table
   contents:
+    - title: Graduate Research Assistant
+      institution: Computer Science, University of British Columbia
+      year: May 2024 - Now
+      description:
+        - Actively researching on how to leverage diffusion models for footstep planning of physics-based characters
+
     - title: Undergraduate Student Research Assistant
       institution: Computer Science, University of British Columbia
       year: May - Aug., 2022
@@ -39,6 +45,11 @@
 - title: Teaching Experience
   type: time_table
   contents:
+    - title: Graduate Teaching Assistant
+      institution: University of British Columbia
+      year: Sep. - Dec., 2024
+      description:
+        - "CPSC 533V: Learning to Move"
     - title: Graduate Teaching Assistant
       institution: University of British Columbia
       year: Jan. - Apr., 2024
