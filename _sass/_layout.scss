@@ -27,11 +27,23 @@ body.sticky-bottom-footer {
 }
 
 // Profile
+// .profile {
+//   img {
+//     width: 150%;
+//   }
+// }
+
 .profile {
   img {
-    width: 100%;
+    width: 125%; /* Adjust to your liking */
+    max-width: 600px; /* Ensures it doesn't get too big on large screens */
+    height: auto; /* Maintains aspect ratio */
+    margin: 0 auto;
+    display: block;
   }
 }
+
+
 
 // TODO: redefine content layout.
 

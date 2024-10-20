@@ -6,7 +6,7 @@ permalink: /
 
 profile:
   align: right
-  image: linkedin.jpg
+  image: me.jpg
   image_cicular: false # crops the image to make it circular
   address: >-
 news: true  # includes a list of news items
