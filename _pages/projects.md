@@ -5,6 +5,16 @@ title: "Projects"
 nav: true
 nav_order: 1
 projects:
+  - title: "Planning with Diffusion via Constraint Verification for Physics-Based Characters"
+    description: "Coming Soon!!!"
+    image: "/assets/img/diff_planner_cover.png"
+    publication: false
+
+  - title: "Walk This Way: Imitation-Free Reinforcement Learning of Flexibly-Constrained Walking Controllers"
+    description: "Coming Soon!!!"
+    image: "/assets/img/walk_this_way_cover_img.png"
+    publication: false
+
   - title: "Robot-to-Robot transfer for Quadrupedal Locomotion"
     description: "Course Research Project during Masters"
     image: "/assets/img/554x_project.png"
